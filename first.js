@@ -1,69 +1,90 @@
-let fare1=document.getElementById("fare");
+function hello(){
+    var x = document.getElementById("hello");
 
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+    x.style.display = "block";
 
+}
 
 
 function drop(){
      let Arr= ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     for(let i=0;i<=Arr.length-1;i++)
     {
-    document.getElementById('des').innerHTML+=` <option value="${i+1}">
-    ${Arr[i]}</option>`;
+    document.getElementById('des').innerHTML+=` <option value="${i+1}">${Arr[i]}</option>`;
  
-    document.getElementById('selc').innerHTML+=`<option value="${i+1}">
-    ${Arr[i]}</option>`;
+    document.getElementById('selc').innerHTML+=`<option value="${i+1}">${Arr[i]}</option>`;
     }
  }
- drop();
+drop();
 
-
-
- function calculatefare()
+function calculatefare()
  {
+    hello();
+    let first=document.getElementById('des').value;
+    let second=document.getElementById('selc').value;
+    let mode=document.getElementById('mode').value;
+    console.log(mode);
+     if(mode=='none'){
+       alert("Select payment mode");
+     }
+     else{
+         if (selc=="none"||des=="none"){
+             return;
+         }
 
-    let first=des.options[des.selectedIndex].value;
-    let second=selc.options[selc.selectedIndex].value;
+
     console.log(first)
     console.log(second)
-
+   
     let stnCvd=Math.abs(second-first);
     let price=0;
     if(stnCvd>=0 && stnCvd<=4){
         price=10; 
     }
-    else if(stnCvd<=5 && stnCvd>=8){
+    else if(stnCvd>=5 && stnCvd<=8){
         price=20; 
     }
-    else if(stnCvd<=9&& stnCvd>=12){  
+    else if(stnCvd>=9 && stnCvd<=12){  
         price=30; 
     }
-    else if(stnCvd<=13 && stnCvd>=16){
+    else if(stnCvd>=13 && stnCvd<=16){
         price=40; 
     }
-    else if(stnCvd<=17 && stnCvd>=20){
+    else if(stnCvd>=17 && stnCvd<=20){
         price=50; 
 
     }
-    else if(stnCvd<=21 && stnCvd>=24){
+    else if(stnCvd>=21 && stnCvd<=24){
         price=60; 
     }
-    else{
-        
-            price=70; 
+    else if(stnCvd > 24) {
+        price=70; 
     }
-    
-    console.log(stnCvd)
-    return price;
+    if(price>60)
+    {
+    price=60;
+    }
+    if(mode=='mc'&& stnCvd>=5)
+    {
+        price-=(price*0.1);
+    }
+    console.log(price);
+    document.getElementById('fare').value=price;
  }
-
- document.getElementById("btn").addEventListener('click', function(){
-    console.log("button is clicked")
-    // calculatefare();
-    console.log(calculatefare());
-    fare1.value=calculatefare();
- })
+}
 
 
 
+//  document.getElementById("btn").addEventListener('click', function(){
+//     console.log("button is clicked")
+//     // calculatefare();
+//     console.log(calculatefare());
+//     fare1.value=calculatefare();
+//  })
 
- 
+

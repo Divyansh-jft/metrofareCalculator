@@ -3,38 +3,39 @@
         <title>
             metro fare calculator
         </title>
-        <link rel="stylesheet" href="1.css">
+        <link rel="stylesheet" href
+        ="1.css">
     </head>
     <body class="body">
-        <p>Delhi Metro Fare Calculator</p><br>
+        <p style="color: yellow;">Delhi Metro Fare Calculator</p><br>
         <div>
-            <label>Select station</label>
-            <select id="selc">
+            <label style="color: rgb(31, 187, 31);">Select station</label>
+            <select id="selc" value="none">
                 <option selected disabled>Choose here</option>
              
             </select>
 
-          <label>Destination Name</label>
-            <select id="des">
+          <label style="color: rgb(225, 233, 225);">Destination Name</label>
+            <select id="des" value="none">
                 <option selected disabled>Choose here</option>
              
             </select>
           </div><br>
           <div>
-            <label>Payment Methods</label>
-            <select>
-                <option value="" selected disabled hidden>Choose here</option>
-              <option value="0">Metro Card</option> 
-              <option value="1">Metro Token</option> 
+            <label style="color: blue;">Payment Methods</label>
+            <select id="mode">
+                <option value="none" selected disabled hidden>Choose here</option>
+              <option id="mc" value="mc">Metro Card</option> 
+              <option id="md" value="md">Metro Token</option> 
             </select>
           </div><br>
 
           <div>
-          <label >Fare:</label>
+          <label style="color: cyan ;">Fare:</label>
             <input id ="fare" type="text" disabled>
         </div><br>
-        <input type="button" id="btn"  value="Calculate"/>
-        <!-- <input type="button" value="Reset" /> -->
+        <button id="btn" onclick="calculatefare()">Calculate</button>
+       <label style="color: rgb(47, 0, 255);" id="hello" value="Hello" hidden> Thanks For choosing Delhi Metro!!</label>
         <script src="first.js"></script>
     </body>
 
