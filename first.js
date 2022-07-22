@@ -23,25 +23,28 @@ function drop(){
 
     let first=des.options[des.selectedIndex].value;
     let second=selc.options[selc.selectedIndex].value;
-    let stationCovered=Math.abs(second-first);
+    console.log(first)
+    console.log(second)
+
+    let stnCvd=Math.abs(second-first);
     let price=0;
-    if(0>=stationCovered && stationCovered<=4){
+    if(stnCvd>=0 && stnCvd<=4){
         price=10; 
     }
-    else if(5>=stationCovered && stationCovered<=8){
+    else if(stnCvd<=5 && stnCvd>=8){
         price=20; 
     }
-    else if(9>=stationCovered && stationCovered<=12){
+    else if(stnCvd<=9&& stnCvd>=12){  
         price=30; 
     }
-    else if(13>=stationCovered && stationCovered<=16){
+    else if(stnCvd<=13 && stnCvd>=16){
         price=40; 
     }
-    else if(17>=stationCovered && stationCovered<=20){
+    else if(stnCvd<=17 && stnCvd>=20){
         price=50; 
 
     }
-    else if(21>=stationCovered && stationCovered<=24){
+    else if(stnCvd<=21 && stnCvd>=24){
         price=60; 
     }
     else{
@@ -49,7 +52,7 @@ function drop(){
             price=70; 
     }
     
-    console.log(stationCovered)
+    console.log(stnCvd)
     return price;
  }
 
