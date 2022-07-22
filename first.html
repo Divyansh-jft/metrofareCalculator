@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            mtero fare calculator
+        </title>
+        <link rel="stylesheet" href="1.css">
+    </head>
+    <body class="body">
+        <p>Delhi Metro Fare Calculator</p><br>
+        <div>
+            <label>Select station</label>
+            <select id="selc">
+                <option selected disabled>Choose here</option>
+             
+            </select>
+
+          <label>Destination Name</label>
+            <select id="des">
+                <option selected disabled>Choose here</option>
+             
+            </select>
+          </div><br>
+          <div>
+            <label>Payment Methods</label>
+            <select>
+                <option value="" selected disabled hidden>Choose here</option>
+              <option value="0">Metro Card</option> 
+              <option value="1">Metro Token</option> 
+            </select>
+          </div><br>
+
+          <div>
+          <label >Fare:</label>
+            <input id ="fare" type="text" disabled>
+        </div><br>
+        <input type="button" id="btn"  value="Calculate"/>
+        <!-- <input type="button" value="Reset" /> -->
+        <script src="first.js"></script>
+    </body>
+
+</html>
