@@ -1,12 +1,14 @@
 function hello(){
-    var x = document.getElementById("hello");
+   var a= document.getElementById("fare").value;
+   if(a)
+   {
 
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
+    var x = document.getElementById("hello");
     x.style.display = "block";
+
+    
+   }
+    
 
 }
 
@@ -24,7 +26,6 @@ drop();
 
 function calculatefare()
  {
-    hello();
     let first=document.getElementById('des').value;
     let second=document.getElementById('selc').value;
     let mode=document.getElementById('mode').value;
@@ -36,8 +37,6 @@ function calculatefare()
          if (selc=="none"||des=="none"){
              return;
          }
-
-
     console.log(first)
     console.log(second)
    
@@ -75,16 +74,11 @@ function calculatefare()
     }
     console.log(price);
     document.getElementById('fare').value=price;
+    hello();
  }
 }
 
 
 
-//  document.getElementById("btn").addEventListener('click', function(){
-//     console.log("button is clicked")
-//     // calculatefare();
-//     console.log(calculatefare());
-//     fare1.value=calculatefare();
-//  })
 
 

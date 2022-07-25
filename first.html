@@ -35,8 +35,34 @@
             <input id ="fare" type="text" disabled>
         </div><br>
         <button id="btn" onclick="calculatefare()">Calculate</button>
-       <label style="color: rgb(47, 0, 255);" id="hello" value="Hello" hidden> Thanks For choosing Delhi Metro!!</label>
+       <label style="color: red;" id="hello" value="Hello" hidden> Thanks For choosing Delhi Metro!!</label>
         <script src="first.js"></script>
     </body>
 
 </html>
+
+
+
+
+
+<script>
+ 
+  // Javascript program to compute sum of digits in
+  // number.
+   
+  /* Function to get sum of digits */
+  function getSum(n)
+  {
+      var sum = 0;
+      while (n != 0) {
+          sum = sum + n % 10;
+          n = parseInt(n / 10);
+      }
+      return sum;
+  }
+   
+  // Driver code
+  var n = 687;
+  document.write(getSum(n));
+   
+  </script>
